@@ -11,6 +11,9 @@ class SubjectsController < ApplicationController
   # GET /subjects/1
   # GET /subjects/1.json
   def show
+    @subject = Subject.find(params[:id])
+    @user = current_user
+    @zodiac = @subject.birthday.zodiac_sign
   end
 
   # GET /subjects/new

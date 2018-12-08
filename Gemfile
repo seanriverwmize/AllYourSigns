@@ -64,3 +64,5 @@ end
 
 #adding Devise for authentication
 gem 'devise'
+
+gem 'zodiac'
