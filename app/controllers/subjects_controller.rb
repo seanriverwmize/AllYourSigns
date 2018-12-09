@@ -14,6 +14,43 @@ class SubjectsController < ApplicationController
     @subject = Subject.find(params[:id])
     @user = current_user
     @zodiac = @subject.birthday.zodiac_sign
+    if @zodiac == "Aquarius"
+      @native_zodiac = "The Otter"
+      @birthstone = "Amethyst"
+    elsif @zodiac == "Pisces"
+      @native_zodiac = "The Wolf"
+      @birthstone = "Aquamarine"
+    elsif @zodiac == "Aries"
+      @native_zodiac = "The Falcon"
+      @birthstone = "Diamond"
+    elsif @zodiac == "Taurus"
+      @native_zodiac = "The Beaver"
+      @birthstone = "Emerald"
+    elsif @zodiac == "Gemini"
+      @native_zodiac = "The Dear"
+      @birthstone = "Pearl"
+    elsif @zodiac == "Cancer"
+      @native_zodiac = "The WoodPecker"
+      @birthstone = "Ruby"
+    elsif @zodiac == "Leo" 
+      @native_zodiac = "The Salmon"
+      @birthstone = "Peridot"
+    elsif @zodiac == "Virgo"
+      @native_zodiac = "The Bear"
+      @birthstone = "Sapphire"
+    elsif @zodiac == "Libra"
+      @native_zodiac = "The Raven"
+      @birthstone = "Opal"
+    elsif @zodiac == "Scorpio"
+      @native_zodiac = "The Snake"
+      @birthstone = "Topaz"
+    elsif @zodiac == "Sagittarius"
+      @native_zodiac = "The Owl"
+      @birthstone = "Turquoise"
+    elsif @zodiac == "Capricorn"
+      @native_zodiac = "The Goose"
+      @birthstone = "Garnet"
+    end
   end
 
   # GET /subjects/new
