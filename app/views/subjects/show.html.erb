@@ -2,50 +2,52 @@
 <% if @subject.user_id == @user.id %>
 
 <%= link_to 'Back', subjects_path %> | <%= link_to 'Edit', edit_subject_path(@subject) %>
-<p>
-  <strong>Name:</strong>
-  <%= @subject.name %>
-</p>
+<div class="subject-table">
+  <p class="subject-show-page">
+    <strong>Name:</strong>
+    <%= @subject.name %>
+  </p>
 
-<p>
-  <strong>Birthday:</strong>
-  <%= @subject.birthday %>
-</p>
+  <p class="subject-show-page">
+    <strong>Birthday:</strong>
+    <%= @subject.birthday %>
+  </p>
 
-<p>
-  Zodiac:
-  <%= @zodiac %>
-</p>
-<% if @zodiac == "Aquarius" %>
-  <% @native_zodiac = "The Otter" %>
-<% elsif @zodiac == "Pisces" %>
-  <% @native_zodiac = "The Wolf" %>
-<% elsif @zodiac == "Aries" %>
-  <% @native_zodiac = "The Falcon" %>
-<% elsif @zodiac == "Taurus" %>
-  <% @native_zodiac = "The Beaver" %>
-<% elsif @zodiac == "Gemini" %>
-  <% @native_zodiac = "The Dear" %>
-<% elsif @zodiac == "Cancer" %>
-  <% @native_zodiac = "The WoodPecker" %>
-<% elsif @zodiac == "Leo" %>
-  <% @native_zodiac = "The Salmon" %>
-<% elsif @zodiac == "Virgo" %>
-  <% @native_zodiac = "The Bear" %>
-<% elsif @zodiac == "Libra" %>
-  <% @native_zodiac = "The Raven" %>
-<% elsif @zodiac == "Scorpio" %>
-  <% @native_zodiac = "The Snake" %>
-<% elsif @zodiac == "Sagittarius" %>
-  <% @native_zodiac = "The Owl" %>
-<% elsif @zodiac == "Capricorn" %>
-  <% @native_zodiac = "The Goose" %>
-<% end %>
-<p>
-  Native American zodiac: <%= @native_zodiac %>
+  <p class="subject-show-page">
+    Zodiac:
+    <%= @zodiac %>
+  </p>
+  <% if @zodiac == "Aquarius" %>
+    <% @native_zodiac = "The Otter" %>
+  <% elsif @zodiac == "Pisces" %>
+    <% @native_zodiac = "The Wolf" %>
+  <% elsif @zodiac == "Aries" %>
+    <% @native_zodiac = "The Falcon" %>
+  <% elsif @zodiac == "Taurus" %>
+    <% @native_zodiac = "The Beaver" %>
+  <% elsif @zodiac == "Gemini" %>
+    <% @native_zodiac = "The Dear" %>
+  <% elsif @zodiac == "Cancer" %>
+    <% @native_zodiac = "The WoodPecker" %>
+  <% elsif @zodiac == "Leo" %>
+    <% @native_zodiac = "The Salmon" %>
+  <% elsif @zodiac == "Virgo" %>
+    <% @native_zodiac = "The Bear" %>
+  <% elsif @zodiac == "Libra" %>
+    <% @native_zodiac = "The Raven" %>
+  <% elsif @zodiac == "Scorpio" %>
+    <% @native_zodiac = "The Snake" %>
+  <% elsif @zodiac == "Sagittarius" %>
+    <% @native_zodiac = "The Owl" %>
+  <% elsif @zodiac == "Capricorn" %>
+    <% @native_zodiac = "The Goose" %>
+  <% end %>
+  <p class="subject-show-page">
+    Native American zodiac: <%= @native_zodiac %>
 
-</p>
+  </p>
 
-<% else %>
-<p> You are not allowed to view this page </p>
-<% end %>
+  <% else %>
+  <p class="subject-show-page"> You are not allowed to view this page </p>
+  <% end %>
+</div>

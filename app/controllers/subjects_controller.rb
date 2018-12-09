@@ -4,7 +4,7 @@ class SubjectsController < ApplicationController
   # GET /subjects
   # GET /subjects.json
   def index
-    @subjects = Subject.all
+    @subjects = Subject.all.sort_by { |m| m.name.downcase }
     @user = current_user
   end
 
@@ -77,4 +77,5 @@ class SubjectsController < ApplicationController
     def subject_params
       params.require(:subject).permit(:name, :birthday)
     end
+
 end

@@ -18,3 +18,7 @@ nav ul li a{
   margin: 60px;
   font-size: 2em;
 }
+
+a:visited{
+  color: black;
+}
