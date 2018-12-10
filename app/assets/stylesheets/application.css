@@ -19,6 +19,21 @@ nav ul li a{
   font-size: 2em;
 }
 
-a:visited{
+a.btn.btn-primary,
+a.btn.btn-primary:visited{
+  color: white;
+}
+
+li.nav-item a{
   color: black;
+}
+
+li.nav-item a:visited{
+  color: black;
+}
+
+a:hover,
+li.nav-item a:hover{
+  color: blue;
+  background-color: #F8F9FA;
 }
